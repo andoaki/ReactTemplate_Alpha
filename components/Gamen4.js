@@ -235,11 +235,15 @@ class Gamen4 extends Component {
               <h4>サンプル実装内容</h4>
               <p>引数の受け渡しテスト</p>
               <hr />
-              <h4>親画面からの引数</h4>
+              <h4>
+                <FwLabel className='col-sm-2' text='親画面からの引数' for=''/>
+              </h4>
               <p>
                 <FwLabel className='col-sm-2' text={this.props.gamen4.dialogArgs1} for='' ref='dialogArgs1'/>
               </p>
-              <h4>親画面への戻り値</h4>
+              <h4>
+                <FwLabel className='col-sm-2' text='親画面への戻り値' for=''/>
+              </h4>
               <p>
                 <FwInputText onSave={this.handleSelectDialogReturn1.bind(this)}
                  text={this.props.gamen4.dialogReturn1} className='alert-success col-sm-3' ref='dialogReturn1'/>

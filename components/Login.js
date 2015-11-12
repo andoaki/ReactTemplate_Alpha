@@ -21,10 +21,6 @@ class Login extends mixin(History) {
     };
   }
 
-  contextTypes: {
-    router: React.PropTypes.func
-  }
-
   handleLoginidSave(text) {
     if (text.length !== 0) {
       this.props.login.loginid = text;

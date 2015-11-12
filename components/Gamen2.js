@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as Gamen2Actions from '../actions/Gamen2Actions';
-import FwInputText from './FwInputText';
+import FwInputText from '../components/FwInputText';
 import FwLabel from '../components/FwLabel';
 import FwButton from '../components/FwButton';
 import FwDropDown from '../components/FwDropDown';
@@ -28,16 +28,17 @@ class Gamen2 extends Component {
     }
   }
 
-  handleSearch() {
-    this.state.logic1.getData(this.props.gamen2.search_text)
+  handleSelect(file) {
+    const _this = this;
+    this.state.logic1.getData(file)
     .then((obj) => {
       console.debug(obj);
-      this.state.actions.searchOnClick(obj);
+      _this.state.actions.selectOnChange(obj);
     }).catch((err) => {
       console.error(err);
     });
   }
-
+  
   render() {
     console.log('Gamen2:' + JSON.stringify(this.props.gamen2.employees));
     const serach_items = [
