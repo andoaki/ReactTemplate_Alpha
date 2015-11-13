@@ -150,7 +150,7 @@ class Gamen4 extends Component {
       <div className={classnames('container')}>
           <div className={classnames('row')}>
               <Panel>
-                  <h3>登録画面</h3>
+                  <h3>結果報告画面</h3>
               </Panel>
           </div>
           <div className={classnames('row')}>

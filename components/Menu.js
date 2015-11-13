@@ -9,7 +9,7 @@ const menuItems = [
   { text: '登録画面',           link: '/gamen1',  icon: 'fa fa-star' },
   { text: 'サーバアクセス画面', link: '/gamen2',  icon: 'fa fa-star' },
   { text: 'お絵かき画面',       link: '/gamen3',  icon: 'fa fa-dot-circle-o' },
-  { text: '結果報告画面', link: '/gamen4',  icon: 'fa fa-star' },
+  { text: '結果報告画面',       link: '/gamen4',  icon: 'fa fa-star' },
   { text: 'Google',             link: GOOGLE_URL, icon: 'fa fa-github', isExternal: true },
   { text: 'ログアウト',         link: '/',        icon: 'fa fa-user' },
 ]
