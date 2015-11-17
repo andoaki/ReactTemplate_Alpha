@@ -10,10 +10,10 @@ const initialState = {
 export default function login(state = initialState, action) {
   switch (action.type) {
   case LOGIN_LOGIN_ON_CLICK:
-    console.log(state);
-    if ((state.loginid == state.password) && (state.loginid != '')) {
-      state.loginid = '';
-      state.password = '';
+    console.log(action.loginInfo);
+    if ((action.loginInfo.loginid == action.loginInfo.password) && (action.loginInfo.loginid != '')) {
+      state.loginid = action.loginInfo.loginid;
+      state.password = action.loginInfo.password;
       state.confirm = '1';
       state.message = '';
     } else {

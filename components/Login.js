@@ -22,19 +22,19 @@ class Login extends mixin(History) {
   }
 
   handleLoginidSave(text) {
-    if (text.length !== 0) {
-      this.props.login.loginid = text;
-    }
+    this.props.login.loginid = text;
   }
 
   handlePasswordSave(text) {
-    if (text.length !== 0) {
-      this.props.login.password = text;
-    }
+    this.props.login.password = text;
   }
 
   handleLogin() {
-    this.state.actions.loginOnClick();
+    const loginInfo = {
+      loginid: this.props.login.loginid,
+      password: this.props.login.password
+    }
+    this.state.actions.loginOnClick(loginInfo);
 
     if (this.props.login.confirm == '1') {
       this.history.pushState(null, '/top', '');
